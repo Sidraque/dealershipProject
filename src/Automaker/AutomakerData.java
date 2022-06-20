@@ -14,14 +14,13 @@ public class AutomakerData extends ConnectionDB {
         //preparando a instrução
         PreparedStatement preparedStatement = super.toConnect().prepareStatement(sql);
         //passando os valores para os param
-        preparedStatement.setString(0, automaker.getCnpj());
-        preparedStatement.setString(1, automaker.getName());
-        preparedStatement.setString(2, automaker.getAddress());
+        preparedStatement.setString(0, automaker.getName());
+        preparedStatement.setString(1, automaker.getAddress());
+        preparedStatement.setString(2, automaker.getCnpj());
         preparedStatement.setString(3, automaker.getPhone());
         // execute insert SQL stetement
         preparedStatement.executeUpdate();
         //fechando a conexão com o banco de dados
         super.disconnect();
-
     }
 }
