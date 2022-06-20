@@ -1,14 +1,14 @@
 package Car;
 
 public class Car {
-    private int numChassi;
+    private String numChassi;
     private String licensePlate;
     private String brand;
     private String model;
     private String color;
     private int year;
 
-    public int getNumChassi(){
+    public String getNumChassi(){
         return numChassi;
     }
 

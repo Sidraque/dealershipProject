@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="e98156b6-158a-4fc8-bc16-44ff8e90ad26" name="@localhost Mapping">
+      <data-sources db="5fe75b89-4e18-42f5-aa4b-c59dd7ff720a" ddl="a7499a18-0912-40ca-968d-ef87b89706f5" />
+      <scope>
+        <node negative="1">
+          <node kind="database" negative="1">
+            <node kind="schema" negative="1" />
+          </node>
+          <node kind="schema">
+            <name qname="consecionaria" />
+            <name qname="pooPro" />
+          </node>
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="1feb7de3-acca-459e-8f06-638defcac63f" name="User Data Source Mapping">
+      <data-sources db="51c9a8e6-a50e-4fc7-a827-94be04bc9c57" ddl="a7499a18-0912-40ca-968d-ef87b89706f5" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="a7499a18-0912-40ca-968d-ef87b89706f5" />
+          <option name="name" value="@localhost (DDL)" />
+          <option name="languageId" value="MariaDB" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
