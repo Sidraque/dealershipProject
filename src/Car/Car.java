@@ -21,47 +21,47 @@ public class Car {
         return numChassi;
     }
 
-    public void setNumChassi(){
-        this.numChassi = numChassi;
+    public void setNumChassi(int numChassi){
+        this.numChassi = this.numChassi;
     }
 
     public String getLicensePlate() {
         return licensePlate;
     }
 
-    public void setLicensePlate() {
-        this.licensePlate = licensePlate;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = this.licensePlate;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(){
-        this.brand = brand;
+    public void setBrand(String brand){
+        this.brand = this.brand;
     }
 
     public String getModel(){
         return model;
     }
 
-    public void setModel(){
-        this.model = model;
+    public void setModel(String model){
+        this.model = this.model;
     }
 
     public String getColor(){
         return color;
     }
 
-    public void setColor(){
-        this.color = color;
+    public void setColor(String color){
+        this.color = this.color;
     }
 
     public int getYear(){
         return year;
     }
 
-    public void setYear(){
-        this.year = year;
+    public void setYear(int year){
+        this.year = this.year;
     }
 }
