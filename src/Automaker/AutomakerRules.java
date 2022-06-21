@@ -2,7 +2,6 @@ package Automaker;
 
 public class AutomakerRules {
     public void registerAutomaker(Automaker automaker) throws Exception {
-
         if ((automaker.getName() == null)||(automaker.getName().trim().equals("") == true)) {
             throw new Exception("Informar o nome da montadora");
         }
@@ -22,7 +21,7 @@ public class AutomakerRules {
         AutomakerData automakerData = new AutomakerData();
         automakerData.registerAutomaker(automaker);
         automakerData.automakerArrayList();
-
     }
+
 
 }

@@ -18,23 +18,23 @@ public class Sale {
         return numNote;
     }
 
-    public void setNumNote(){
-        this.numNote = numNote;
+    public void setNumNote(String numNote){
+        this.numNote = this.numNote;
     }
 
     public float getTotalValue(){
         return totalValue;
     }
 
-    public void setTotalValue(){
-        this.totalValue = totalValue;
+    public void setTotalValue(float totalValue){
+        this.totalValue = this.totalValue;
     }
 
     public String getPaymentMethod(){
         return paymentMethod;
     }
 
-    public void setPaymentMethod(){
-        this.paymentMethod = paymentMethod;
+    public void setPaymentMethod(String paymentMethod){
+        this.paymentMethod = this.paymentMethod;
     }
 }

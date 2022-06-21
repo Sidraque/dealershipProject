@@ -19,7 +19,7 @@ public class Seller {
         return rg;
     }
 
-    public void setRg(){
+    public void setRg(String numNote){
         this.rg = rg;
     }
 
@@ -27,24 +27,24 @@ public class Seller {
         return name;
     }
 
-    public void setName(){
-        this.name = name;
+    public void setName(String name){
+        this.name = this.name;
     }
 
     public int getExpYear(){
         return expYear;
     }
 
-    public void setExpYear(){
-        this.expYear = expYear;
+    public void setExpYear(int expYear){
+        this.expYear = this.expYear;
     }
 
     public String getPhone(){
         return phone;
     }
 
-    public void setPhone(){
-        this.phone = phone;
+    public void setPhone(String phone){
+        this.phone = this.phone;
     }
 
 

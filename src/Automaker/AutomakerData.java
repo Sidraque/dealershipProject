@@ -11,15 +11,16 @@ import java.util.ArrayList;
 public class AutomakerData extends ConnectionDB {
     public void registerAutomaker(Automaker automaker) throws SQLException, Exception {
         //instrução a ser executada
-        String sql = "INSERT INTO automaker (name)  VALUES (?)";
+        String sql = "INSERT INTO automaker (name, address, cnpj, phone)  VALUES ((?), (?), (?), (?))";
         //preparando a instrução
         PreparedStatement preparedStatement = super.toConnect().prepareStatement(sql);
         //passando os valores para os param
-        preparedStatement.setString(0, automaker.getName());
-        preparedStatement.setString(1, automaker.getAddress());
-        preparedStatement.setString(2, automaker.getCnpj());
-        preparedStatement.setString(3, automaker.getPhone());
-        // execute insert SQL stetement
+        preparedStatement.setInt(0, automaker.getCodAutomaker());
+        preparedStatement.setString(1, automaker.getName());
+        preparedStatement.setString(2, automaker.getAddress());
+        preparedStatement.setString(3, automaker.getCnpj());
+        preparedStatement.setString(4, automaker.getPhone());
+        // execute insert SQL statement
         preparedStatement.executeUpdate();
         //fechando a conexão com o banco de dados
         super.disconnect();
@@ -29,7 +30,7 @@ public class AutomakerData extends ConnectionDB {
 
         ArrayList<Automaker> automakerArrayList = new ArrayList<>();
 
-        //instrução sql listando os tipos
+        //instrução sql listando
         String sql = " select codAutomaker, name, address, cnpj, phone ";
         sql += " from automaker ";
         sql += " where automaker.codAutomaker > 0 ";
@@ -40,7 +41,7 @@ public class AutomakerData extends ConnectionDB {
         Automaker a = null;
         while (reader.next()) {
             a = new Automaker();
-            a.setName(String.valueOf(reader.getInt("codAutomaker")));
+            a.setCodAutomaker(Integer.parseInt(String.valueOf(reader.getInt("codAutomaker"))));
             a.setName(reader.getString("name"));
             a.setAddress(reader.getString("address"));
             a.setCnpj(reader.getString("cnpj"));
@@ -60,6 +61,24 @@ public class AutomakerData extends ConnectionDB {
         PreparedStatement preparedStatement = super.toConnect().prepareStatement(sql);
         //passando os valores para os param
         preparedStatement.setInt(0, a.getCodAutomaker());
+        // execute insert SQL statement
+        preparedStatement.executeUpdate();
+        //fechando a conexão com o banco de dados
+        super.disconnect();
+    }
+
+    public void updateAutomaker(Automaker a) throws SQLException, Exception {
+        //instrucao a ser executada
+        String sql = "UPDATE automaker SET name = ?, address = ?, cnpj = ?, phone = ?, codCar = ? WHERE codAutomaker = ?";
+
+        //preparando a instrução
+        PreparedStatement preparedStatement = super.toConnect().prepareStatement(sql);
+        //passando os valores para os parametros
+        preparedStatement.setString(1, a.getName());
+        preparedStatement.setString(2, a.getAddress());
+        preparedStatement.setString(3, a.getCnpj());
+        preparedStatement.setString(4, a.getPhone());
+
         // execute insert SQL stetement
         preparedStatement.executeUpdate();
         //fechando a conexão com o banco de dados
