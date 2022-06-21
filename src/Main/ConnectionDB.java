@@ -14,7 +14,7 @@ public class ConnectionDB {
     }
     private Statement stmt;
     public Connection conn;
-    private final String DRIVER_MYSQL = "com.mysql.jdbc.Driver";
+    private final String DRIVER_MYSQL = "com.mysql.cj.jdbc.Driver";
     private final String LOCAL_SERVIDOR = "127.0.0.1";
     private final String BANCO_DE_DADOS = "dealerShip";
     private final String PORTA_BANCO = "3306";

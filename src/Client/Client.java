@@ -1,10 +1,19 @@
 package Client;
 
 public class Client {
+    private int codClient;
     private String rg;
     private String name;
     private String phone;
     private String address;
+
+    public int getCodClient() {
+        return codClient;
+    }
+
+    public void setCodClient(int codClient) {
+        this.codClient = codClient;
+    }
 
     public String getRg(){
         return rg;

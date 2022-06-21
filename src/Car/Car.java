@@ -1,12 +1,21 @@
 package Car;
 
 public class Car {
+    private int codCar;
     private int numChassi;
     private String licensePlate;
     private String brand;
     private String model;
     private String color;
     private int year;
+
+    public int getCodCar(){
+        return codCar;
+    }
+
+    public void setCodCar(int codCar) {
+        this.codCar = codCar;
+    }
 
     public int getNumChassi(){
         return numChassi;

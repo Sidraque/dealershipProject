@@ -1,10 +1,19 @@
 package Seller;
 
 public class Seller {
+    private int codSeller;
     private String rg;
     private String name;
     private int expYear;
     private String phone;
+
+    public int getCodSeller() {
+        return codSeller;
+    }
+
+    public void setCodSeller(int codSeller) {
+        this.codSeller = codSeller;
+    }
 
     public String getRg(){
         return rg;
