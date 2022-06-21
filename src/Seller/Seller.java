@@ -38,5 +38,4 @@ public class Seller {
         this.phone = phone;
     }
 
-
 }

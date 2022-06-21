@@ -18,8 +18,8 @@ public class SaleRules {
             throw new Exception("O numero da nota deverá ter 10  caracteres");
         }
 
-        if (Sale.getPaymentMethod().trim().length() != 9) {
-            throw new Exception("O metodo de pagamento devera ser ou a vista ou credito");
+        if (Sale.getPaymentMethod().trim().length().equals("1") || Sale.getPaymentMethod().trim().length().equals("2")) {
+            throw new Exception("O metodo de pagamento devera ser: \n1 - a vista\n2 - a prazo");
         }
 
         SaleData SaleData = new SaleData();
